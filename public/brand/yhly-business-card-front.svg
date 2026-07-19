@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 600" role="img" aria-labelledby="title">
+  <title id="title">Your Home Like You business card front</title>
+  <rect width="1080" height="600" fill="#181512" />
+  <g fill="none" stroke="#FFFDFC" stroke-width="10">
+    <path d="M82 188v-68l50-34 50 34v68" />
+    <path d="m105 129 27 25 27-25M132 154v34" />
+  </g>
+  <text x="212" y="124" fill="#FFFDFC" font-family="DM Serif Display, Georgia, serif" font-size="43">Your Home</text>
+  <text x="214" y="163" fill="#C81522" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="7">LIKE YOU</text>
+  <text x="78" y="405" fill="#FFFDFC" font-family="DM Serif Display, Georgia, serif" font-size="78">Property,</text>
+  <text x="78" y="486" fill="#FF5A63" font-family="DM Serif Display, Georgia, serif" font-size="78" font-style="italic">made personal.</text>
+  <text x="80" y="548" fill="#FFFFFF" fill-opacity=".38" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="800" letter-spacing="4">90 × 50 MM · FRONT</text>
+</svg>

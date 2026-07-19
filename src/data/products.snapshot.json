@@ -1,0 +1,82 @@
+{
+  "products": [
+    {
+      "id": "interior-direction-session",
+      "sku": "YHLY-INT-01",
+      "category": "Interiors",
+      "name": "Interior Direction Session",
+      "priceKobo": 7500000,
+      "unit": "90-minute session",
+      "image": "/services/interiors.jpg",
+      "imageAlt": "A finished living room with warm curtains and considered furnishings",
+      "description": "A focused in-person consultation for one room, with practical direction on layout, colour, finishes and furnishing priorities.",
+      "variantNote": "",
+      "sortOrder": 10
+    },
+    {
+      "id": "window-measure-specification",
+      "sku": "YHLY-WIN-01",
+      "category": "Window treatments",
+      "name": "Window Measure & Specification",
+      "priceKobo": 4500000,
+      "unit": "up to 5 windows",
+      "image": "/hero-abuja-home.webp",
+      "imageAlt": "A contemporary Abuja home interior with full-height windows",
+      "description": "On-site measurement plus a curtain or blind specification for up to five windows within Abuja.",
+      "variantNote": "",
+      "sortOrder": 20
+    },
+    {
+      "id": "property-condition-inspection",
+      "sku": "YHLY-PRO-01",
+      "category": "Property",
+      "name": "Property Condition Inspection",
+      "priceKobo": 8500000,
+      "unit": "one property",
+      "image": "/services/property.jpg",
+      "imageAlt": "A contemporary residence with landscaped grounds",
+      "description": "A visual inspection and concise action list for owners or buyers planning repairs, improvements or handover.",
+      "variantNote": "",
+      "sortOrder": 30
+    },
+    {
+      "id": "post-construction-clean-deposit",
+      "sku": "YHLY-CARE-01",
+      "category": "Property care",
+      "name": "Post-construction Clean Deposit",
+      "priceKobo": 10000000,
+      "unit": "booking deposit",
+      "image": "/services/property-care.jpg",
+      "imageAlt": "A property-care professional cleaning a finished glass partition",
+      "description": "Secures an assessment and preferred date. Final scope and balance are confirmed after the property survey.",
+      "variantNote": "",
+      "sortOrder": 40
+    },
+    {
+      "id": "room-refresh-concept",
+      "sku": "YHLY-INT-02",
+      "category": "Interiors",
+      "name": "Room Refresh Concept",
+      "priceKobo": 15000000,
+      "unit": "one room",
+      "image": "/hero-luxury-residence.jpg",
+      "imageAlt": "A refined residential interior with layered furniture and lighting",
+      "description": "A tailored concept board, furniture layout and sourced finish shortlist for one existing room.",
+      "variantNote": "",
+      "sortOrder": 50
+    },
+    {
+      "id": "short-let-readiness-audit",
+      "sku": "YHLY-PRO-02",
+      "category": "Property setup",
+      "name": "Short-let Readiness Audit",
+      "priceKobo": 6500000,
+      "unit": "one property",
+      "image": "/services/renovation.jpg",
+      "imageAlt": "A property professional reviewing plans in a contemporary building",
+      "description": "A room-by-room readiness review covering guest function, presentation, maintenance and launch priorities.",
+      "variantNote": "",
+      "sortOrder": 60
+    }
+  ]
+}

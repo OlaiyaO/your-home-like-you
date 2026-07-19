@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-labelledby="title">
+  <title id="title">Your Home Like You social avatar</title>
+  <rect width="1080" height="1080" rx="180" fill="#C81522" />
+  <g fill="none" stroke="#FFFDFC" stroke-width="62" stroke-linejoin="miter">
+    <path d="M240 800V390l300-205 300 205v410" />
+    <path d="m375 445 165 150 165-150M540 595v205" />
+  </g>
+</svg>

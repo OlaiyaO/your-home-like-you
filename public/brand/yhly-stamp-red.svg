@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 380" role="img" aria-labelledby="title desc">
+  <title id="title">Your Home Like You stamp face</title>
+  <desc id="desc">A circular one-colour stamp with the Your Home Like You architectural Y mark.</desc>
+  <defs>
+    <path id="top" d="M 63 190 A 127 127 0 0 1 317 190" />
+    <path id="bottom" d="M 317 190 A 127 127 0 0 1 63 190" />
+  </defs>
+  <g fill="none" stroke="#C81522">
+    <circle cx="190" cy="190" r="166" stroke-width="10" />
+    <circle cx="190" cy="190" r="137" stroke-width="3" stroke-dasharray="7 7" />
+    <path d="M135 248v-72l55-37 55 37v72" stroke-width="10" />
+    <path d="m162 183 28 25 28-25M190 208v40" stroke-width="10" />
+  </g>
+  <g fill="#C81522" font-family="Manrope, Arial, sans-serif" font-weight="800" letter-spacing="6">
+    <text font-size="21"><textPath href="#top" startOffset="50%" text-anchor="middle">YOUR HOME LIKE YOU</textPath></text>
+    <text font-size="16"><textPath href="#bottom" startOffset="50%" text-anchor="middle">ABUJA · NIGERIA</textPath></text>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title">
+  <title id="title">Your Home Like You editable site board</title>
+  <rect width="1200" height="800" fill="#181512" />
+  <rect width="18" height="800" fill="#C81522" />
+  <g fill="none" stroke="#FFFDFC" stroke-width="12"><path d="M85 190v-90l66-45 66 45v90"/><path d="m116 113 35 32 35-32M151 145v45"/></g>
+  <text x="255" y="110" fill="#FFFDFC" font-family="DM Serif Display, Georgia, serif" font-size="54">Your Home</text>
+  <text x="258" y="158" fill="#FF5A63" font-family="Manrope, Arial, sans-serif" font-size="21" font-weight="800" letter-spacing="9">LIKE YOU</text>
+  <text x="80" y="340" fill="#FFFDFC" font-family="DM Serif Display, Georgia, serif" font-size="92">[PROJECT NAME]</text>
+  <text x="84" y="402" fill="#FF5A63" font-family="Manrope, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="6">[PROJECT TYPE · COMPLETION DATE]</text>
+  <g fill="#FFFDFC" fill-opacity=".72" font-family="Manrope, Arial, sans-serif" font-size="24">
+    <text x="84" y="590">Ajoke Ola · +234 704 006 3000 · WhatsApp +234 704 006 3000</text>
+    <text x="84" y="635">Shop 3, B10 Plaza, B10 Street, Citec Mbora Estate</text>
+    <text x="84" y="674">Along Jabi Airport Road, Abuja, Nigeria</text>
+    <text x="84" y="713">[PRIMARY BUSINESS EMAIL] · [PROFESSIONAL BUSINESS EMAIL]</text>
+  </g>
+</svg>
