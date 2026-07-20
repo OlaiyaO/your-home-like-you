@@ -14,7 +14,7 @@ const body = Manrope({
 });
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://yourhomelikeyou.com'),
   title: {
     default: 'Your Home Like You | Property, made personal.',
     template: '%s | Your Home Like You',
@@ -26,6 +26,15 @@ export const metadata = {
     description:
       'Come home to what you imagined. Construction and renovation coordinated from first conversation to final handover.',
     type: 'website',
+    url: '/',
+    siteName: 'Your Home Like You',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Your Home Like You' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Your Home Like You',
+    description: 'Your home. Like you. Construction and renovation coordinated end to end.',
+    images: ['/opengraph-image'],
   },
 };
 
