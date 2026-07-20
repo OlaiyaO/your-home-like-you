@@ -52,6 +52,24 @@ export default function AboutPage() {
         </div>
 
         <div className="flex flex-col justify-center">
+          <div className="mb-10 grid grid-cols-2 border-l border-t border-black/12">
+            <div className="border-b border-r border-black/12 p-6">
+              <strong className="font-display text-5xl font-normal text-red">
+                {site.verifiedCustomerCount}+
+              </strong>
+              <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-ink/45">
+                Verified clients served
+              </p>
+            </div>
+            <div className="border-b border-r border-black/12 p-6">
+              <strong className="font-display text-5xl font-normal text-red">
+                {site.foundedYear}
+              </strong>
+              <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.12em] text-ink/45">
+                Serving clients since
+              </p>
+            </div>
+          </div>
           <SectionHeading
             eyebrow="Our point of view"
             title="The property should fit the person, not the other way around."
@@ -65,6 +83,10 @@ export default function AboutPage() {
             <p>
               We bring aesthetics, upkeep, building work and property thinking into one
               conversation, then coordinate the agreed result through a single project path.
+            </p>
+            <p>
+              That model has grown through more than six years of serving clients, with construction
+              and renovation forming the deepest part of our delivery experience.
             </p>
           </div>
           <p className="mt-10 border-l-2 border-red pl-6 font-display text-3xl italic leading-tight text-ink">

@@ -20,10 +20,11 @@ export const metadata = {
     template: '%s | Your Home Like You',
   },
   description:
-    'Property improvements coordinated from scope to handover, across interiors, care, renovation and property services.',
+    'Construction and renovation for Nigerian homes, coordinated by one accountable property team from first conversation to final handover.',
   openGraph: {
     title: 'Your Home Like You',
-    description: 'One accountable team. From first idea to finished space.',
+    description:
+      'Come home to what you imagined. Construction and renovation coordinated from first conversation to final handover.',
     type: 'website',
   },
 };

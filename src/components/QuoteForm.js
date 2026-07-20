@@ -1,18 +1,39 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, CheckCircle2, MessageCircle } from 'lucide-react';
 
-import { serviceGroups } from '@/data/site';
+import { buildWhatsAppHref, serviceGroups } from '@/data/site';
 
 const initialState = { name: '', phone: '', email: '', service: '', location: '', message: '' };
 
 export function QuoteForm() {
   const [form, setForm] = useState(initialState);
   const [status, setStatus] = useState('idle');
+  const whatsappBriefHref = buildWhatsAppHref(
+    [
+      "Hi Your Home Like You, I'd love your help with a property project. Here's what I have in mind:",
+      form.name && `Name: ${form.name}`,
+      form.phone && `Phone: ${form.phone}`,
+      form.email && `Email: ${form.email}`,
+      form.service && `Service: ${form.service}`,
+      form.location && `Location: ${form.location}`,
+      form.message && `Project: ${form.message}`,
+      '',
+      'Could you help me understand the next step?',
+    ]
+      .filter(Boolean)
+      .join('\n'),
+  );
 
   async function submit(event) {
     event.preventDefault();
+
+    if (event.nativeEvent.submitter?.value === 'whatsapp') {
+      window.open(whatsappBriefHref, '_blank', 'noopener,noreferrer');
+      return;
+    }
+
     setStatus('loading');
 
     const response = await fetch('/api/quote', {
@@ -115,22 +136,51 @@ export function QuoteForm() {
           onChange={(e) => setForm({ ...form, message: e.target.value })}
         />
       </label>
-      <div className="md:col-span-2">
+      <div className="border-t border-black/10 pt-5 md:col-span-2">
+        <p className="eyebrow text-red">Choose how to send it</p>
+        <p className="mb-5 mt-2 text-sm leading-relaxed text-ink/60">
+          WhatsApp opens your completed brief as a message for you to review before sending. Email
+          sends it directly to our team.
+        </p>
+        <button type="submit" name="channel" value="whatsapp" className="button-whatsapp w-full">
+          <span className="flex items-center gap-3 text-left">
+            <span className="grid size-8 place-items-center bg-[#25D366]/12 text-[#35dc73]">
+              <MessageCircle className="size-4" />
+            </span>
+            <span>
+              <span className="block text-[0.6rem] uppercase tracking-[0.14em] text-white/50">
+                Fastest handoff
+              </span>
+              Send completed brief on WhatsApp
+            </span>
+          </span>
+          <ArrowUpRight className="size-4 text-white/65" />
+        </button>
         <button
+          type="submit"
+          name="channel"
+          value="email"
           disabled={status === 'loading'}
-          className="button-primary w-full justify-center disabled:opacity-60"
+          className="button-secondary mt-3 w-full justify-center disabled:opacity-60"
         >
-          {status === 'loading' ? 'Sending brief…' : 'Send property brief'}{' '}
+          {status === 'loading' ? 'Sending brief…' : 'Send brief by email'}{' '}
           <ArrowRight className="size-4" />
         </button>
         {status === 'error' && (
           <p className="mt-3 text-sm text-red">The brief could not be sent. Please try again.</p>
         )}
         {status === 'unavailable' && (
-          <p className="mt-3 border-l-2 border-red pl-3 text-sm leading-relaxed text-ink/60">
-            Online delivery is not connected yet, so your details were not sent. Please keep a copy
-            of this brief until the confirmed contact channel is published.
-          </p>
+          <div className="mt-4 border-l-2 border-[#25D366] pl-4 text-sm leading-relaxed text-ink/60">
+            <p>Online delivery is temporarily unavailable, so your details were not sent.</p>
+            <a
+              className="mt-2 inline-flex items-center gap-2 font-bold text-ink"
+              href={whatsappBriefHref}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <MessageCircle className="size-4 text-[#169C46]" /> Continue on WhatsApp
+            </a>
+          </div>
         )}
       </div>
     </form>

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight, MessageCircle } from 'lucide-react';
+import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react';
 
 import { Logo } from '@/components/Logo';
 import { nav, serviceGroups, site, whatsappContactHref } from '@/data/site';
@@ -37,6 +37,19 @@ function SocialIcon({ label }) {
   );
 }
 
+function WhatsAppIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      className="size-5 text-[#25D366]"
+      fill="currentColor"
+    >
+      <path d="M12 2a9.8 9.8 0 0 0-8.5 14.7L2 22l5.4-1.4A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-2.9-.4-4.1-1.1l-.3-.2-3.2.8.9-3.1-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.8-1.8-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.6 7.6 0 0 1-1.4-1.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4c.1-.1.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.5.6.2 1.2.2 1.7.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.3-.6-.4Z" />
+    </svg>
+  );
+}
+
 export function Footer() {
   const socials = [
     {
@@ -46,7 +59,7 @@ export function Footer() {
     },
     { label: 'Facebook', href: site.facebook, configured: site.facebookConfigured },
     { label: 'LinkedIn', href: site.linkedin, configured: site.linkedinConfigured },
-  ];
+  ].filter((social) => social.configured);
 
   return (
     <footer className="bg-ink text-white">
@@ -63,7 +76,7 @@ export function Footer() {
               rel={site.whatsappConfigured ? 'noreferrer' : undefined}
               className="mt-8 inline-flex min-h-12 items-center gap-3 border border-[#25D366]/45 bg-[#25D366]/10 px-5 text-sm font-bold text-white hover:border-[#25D366] hover:bg-[#25D366] hover:text-ink"
             >
-              <MessageCircle className="size-5 text-[#25D366]" />
+              <WhatsAppIcon />
               {site.whatsappConfigured ? 'Chat on WhatsApp' : 'Start here for WhatsApp'}
               <ArrowUpRight className="size-4" />
             </a>
@@ -96,22 +109,32 @@ export function Footer() {
             <p className="eyebrow text-red-light">Contact</p>
             <div className="mt-5 space-y-3 text-sm leading-relaxed text-white/65">
               <p>{site.contactName}</p>
-              <a className="block hover:text-white" href={`tel:${site.phone.replaceAll(' ', '')}`}>
+              <a
+                className="flex items-center gap-2.5 hover:text-white"
+                href={`tel:${site.phone.replaceAll(' ', '')}`}
+              >
+                <Phone className="size-4 shrink-0 text-red-light" />
                 {site.phone}
               </a>
               {site.primaryEmailConfigured && (
                 <a
-                  className="block break-all hover:text-white"
+                  className="flex items-center gap-2.5 break-all hover:text-white"
                   href={`mailto:${site.primaryEmail}`}
                 >
+                  <Mail className="size-4 shrink-0 text-red-light" />
                   {site.primaryEmail}
                 </a>
               )}
-              <div className="pt-2">
-                {site.addressLines.map((line) => (
-                  <p key={line}>{line}</p>
-                ))}
-              </div>
+              {site.addressLines.length > 0 && (
+                <div className="flex gap-2.5 pt-2">
+                  <MapPin className="mt-0.5 size-4 shrink-0 text-red-light" />
+                  <div>
+                    {site.addressLines.map((line) => (
+                      <p key={line}>{line}</p>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </address>
         </div>
@@ -122,21 +145,23 @@ export function Footer() {
             <Link href="/terms">Terms</Link>
             <Link href="/service-cancellation">Cancellation</Link>
             <Link href="/brand-kit">Brand kit</Link>
-            <div className="flex items-center gap-2" aria-label="Social channels">
-              {socials.map(({ label, href, configured }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target={configured ? '_blank' : undefined}
-                  rel={configured ? 'noreferrer' : undefined}
-                  aria-label={configured ? label : `${label} profile coming soon; return home`}
-                  title={configured ? label : `${label} profile coming soon`}
-                  className="grid size-9 place-items-center border border-white/18 text-white/65 hover:border-red-light hover:text-white"
-                >
-                  <SocialIcon label={label} />
-                </a>
-              ))}
-            </div>
+            {socials.length > 0 && (
+              <div className="flex items-center gap-2" aria-label="Social channels">
+                {socials.map(({ label, href }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={label}
+                    title={label}
+                    className="grid size-9 place-items-center border border-white/18 text-white/65 hover:border-red-light hover:text-white"
+                  >
+                    <SocialIcon label={label} />
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

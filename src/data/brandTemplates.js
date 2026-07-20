@@ -10,7 +10,7 @@ export const brandTemplates = [
     slug: 'business-card-back',
     title: 'Business card back',
     category: 'Identity',
-    description: 'Editable contact side with Ajoke Ola and canonical contact details.',
+    description: 'Editable contact side with canonical business details.',
     download: '/brand/yhly-business-card-back.svg',
   },
   {

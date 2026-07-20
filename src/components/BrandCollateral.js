@@ -52,7 +52,7 @@ export function BusinessCards() {
             <div className="space-y-1 text-[clamp(0.55rem,1vw,0.75rem)] leading-relaxed text-ink/58">
               <p>{site.email}</p>
               <p>{site.phone}</p>
-              <p>{site.location}</p>
+              <p>{site.location || '[BUSINESS ADDRESS]'}</p>
             </div>
             <p className="text-[8px] font-bold uppercase tracking-[0.2em] text-ink/32">
               Back · details template
@@ -108,7 +108,7 @@ export function LetterheadPreview() {
       <div className="flex items-start justify-between gap-5 border-b border-black/12 pb-[7%]">
         <StaticLockup compact />
         <div className="text-right text-[7px] leading-relaxed text-ink/45 sm:text-[9px]">
-          <p>{site.addressLines[0]}</p>
+          <p>{site.addressLines[0] || '[BUSINESS ADDRESS]'}</p>
           <p>{site.email}</p>
           <p>{site.phone}</p>
         </div>

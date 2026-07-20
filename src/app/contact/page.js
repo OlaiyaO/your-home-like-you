@@ -78,8 +78,8 @@ export default function ContactPage() {
               </h2>
             </div>
             <p className="max-w-xl text-base leading-relaxed text-ink/55 lg:justify-self-end">
-              Our social profiles are being prepared. These placeholders remain navigable and will
-              switch to verified business profiles when their URLs are approved.
+              Start on WhatsApp now or follow our verified Instagram profile for updates and project
+              inspiration.
             </p>
           </div>
 
@@ -89,26 +89,28 @@ export default function ContactPage() {
               ['Instagram', site.instagram, site.instagramConfigured],
               ['Facebook', site.facebook, site.facebookConfigured],
               ['LinkedIn', site.linkedin, site.linkedinConfigured],
-            ].map(([label, href, configured]) => (
-              <Link
-                key={label}
-                href={href}
-                target={configured ? '_blank' : undefined}
-                rel={configured ? 'noreferrer' : undefined}
-                className="group flex min-h-44 flex-col justify-between border-b border-r border-black/12 p-6 hover:bg-ivory md:p-8"
-              >
-                <div className="flex items-center justify-between">
-                  <span className={`size-2 ${configured ? 'bg-[#25D366]' : 'bg-stone'}`} />
-                  <ArrowUpRight className="size-4 text-ink/35 transition group-hover:text-red" />
-                </div>
-                <div>
-                  <h3 className="font-display text-2xl">{label}</h3>
-                  <p className="mt-2 text-xs font-bold uppercase tracking-[0.1em] text-ink/38">
-                    {configured ? 'Open verified channel' : 'Profile coming soon'}
-                  </p>
-                </div>
-              </Link>
-            ))}
+            ]
+              .filter(([, , configured]) => configured)
+              .map(([label, href]) => (
+                <Link
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex min-h-44 flex-col justify-between border-b border-r border-black/12 p-6 hover:bg-ivory md:p-8"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="size-2 bg-[#25D366]" />
+                    <ArrowUpRight className="size-4 text-ink/35 transition group-hover:text-red" />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-2xl">{label}</h3>
+                    <p className="mt-2 text-xs font-bold uppercase tracking-[0.1em] text-ink/38">
+                      Open verified channel
+                    </p>
+                  </div>
+                </Link>
+              ))}
           </div>
         </div>
       </section>

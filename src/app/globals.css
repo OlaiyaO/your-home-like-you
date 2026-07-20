@@ -80,7 +80,8 @@ textarea {
 }
 
 .button-primary,
-.button-secondary {
+.button-secondary,
+.button-whatsapp {
   align-items: center;
   display: inline-flex;
   font-size: 0.78rem;
@@ -110,6 +111,19 @@ textarea {
 .button-secondary:hover {
   border-color: #c81522;
   color: #c81522;
+}
+
+.button-whatsapp {
+  background: #181512;
+  border-left: 3px solid #25d366;
+  color: white;
+  justify-content: space-between;
+  min-height: 4.25rem;
+}
+
+.button-whatsapp:hover {
+  background: #2a2521;
+  transform: translateY(-2px);
 }
 
 .header__cta {

@@ -112,7 +112,7 @@ const sections = [
             </span>
           )}
         </div>
-        <p>Our contact address is {site.location}.</p>
+        {site.location && <p>Our contact area is {site.location}.</p>}
       </>
     ),
   },

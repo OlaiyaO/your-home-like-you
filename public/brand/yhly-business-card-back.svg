@@ -3,14 +3,14 @@
   <rect width="1080" height="600" fill="#F6F0E8" />
   <rect x="936" width="12" height="600" fill="#C81522" />
   <line x1="820" y1="70" x2="820" y2="530" stroke="#181512" stroke-opacity=".14" stroke-width="2" />
-  <text x="78" y="135" fill="#181512" font-family="DM Serif Display, Georgia, serif" font-size="68">Ajoke Ola</text>
+  <text x="78" y="135" fill="#181512" font-family="DM Serif Display, Georgia, serif" font-size="68">[CONTACT NAME]</text>
   <text x="80" y="181" fill="#C81522" font-family="Manrope, Arial, sans-serif" font-size="17" font-weight="800" letter-spacing="5">[EDITABLE ROLE]</text>
   <g fill="#181512" fill-opacity=".62" font-family="Manrope, Arial, sans-serif" font-size="18">
-    <text x="80" y="285">[PRIMARY BUSINESS EMAIL]</text>
+    <text x="80" y="285">jummyholar@yahoo.com</text>
     <text x="80" y="318">[PROFESSIONAL BUSINESS EMAIL]</text>
-    <text x="80" y="351">+234 704 006 3000</text>
-    <text x="80" y="400">Shop 3, B10 Plaza, B10 Street, Citec Mbora Estate</text>
-    <text x="80" y="433">Along Jabi Airport Road, Abuja, Nigeria</text>
+    <text x="80" y="351">+234 802 309 2781</text>
+    <text x="80" y="400">[BUSINESS ADDRESS]</text>
+    <text x="80" y="433">[CITY · COUNTRY]</text>
   </g>
   <g fill="none" stroke="#C81522" stroke-width="9">
     <path d="M856 174v-47l34-21 34 21v47" />

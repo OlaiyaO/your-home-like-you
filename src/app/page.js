@@ -25,25 +25,25 @@ export default function Home() {
           <div className="home-hero__copy max-w-[650px]">
             <div className="mb-8 flex items-center gap-3">
               <span className="h-px w-8 bg-red" />
-              <p className="eyebrow text-red-light">For homes and properties across Abuja</p>
+              <p className="eyebrow text-red-light">A home that feels like yours</p>
             </div>
             <h1 className="max-w-3xl font-display text-[clamp(4.5rem,8vw,8.8rem)] leading-[0.78] tracking-[-0.065em] text-white">
               Your home.
               <span className="block italic text-red-light">Like you.</span>
             </h1>
             <p className="mt-10 max-w-[570px] text-lg leading-relaxed text-white/82 md:text-xl">
-              Beautifully dressed, carefully maintained and thoughtfully transformed, through one
-              team that sees the whole picture.
+              You know what feels wrong. We help you decide what needs to change, then carry the
+              work through.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact#quote" className="button-primary">
-                Tell us about your space <ArrowUpRight className="size-4" />
+                Show us what needs to change <ArrowUpRight className="size-4" />
               </Link>
               <a
                 href="#services"
                 className="home-hero__secondary button-secondary bg-black/20 backdrop-blur-md"
               >
-                See what we do <ArrowDown className="size-4" />
+                See where we can help <ArrowDown className="size-4" />
               </a>
             </div>
             <div className="mt-14 grid max-w-[760px] grid-cols-2 border-l border-t border-white/22 bg-black/25 text-[10px] font-bold uppercase tracking-[0.12em] text-white/76 backdrop-blur-md sm:grid-cols-5">
@@ -64,24 +64,21 @@ export default function Home() {
       <section className="border-y border-black/10 bg-paper">
         <div className="mx-auto grid max-w-[1440px] md:grid-cols-[0.55fr_1.45fr]">
           <div className="flex items-center border-b border-black/10 px-5 py-8 md:border-b-0 md:border-r md:px-10">
-            <p className="eyebrow text-red">One home, one team</p>
+            <p className="eyebrow text-red">Start with what feels wrong</p>
           </div>
           <p className="px-5 py-8 font-display text-2xl leading-tight tracking-[-0.02em] text-ink md:px-10 md:text-4xl">
-            Because a beautiful home is not one job. It is every detail working beautifully
-            together.
+            Maybe a room feels unfinished. Maybe a project feels hard to manage. You do not need to
+            know the solution yet.
           </p>
         </div>
       </section>
 
       <section id="services" className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-36">
         <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
-          <SectionHeading
-            eyebrow="Everything your space needs"
-            title="Beautiful now. Ready for what comes next."
-          />
+          <SectionHeading eyebrow="Choose where you need help" title="What needs to change?" />
           <p className="max-w-2xl text-lg leading-relaxed text-ink/58 lg:justify-self-end md:text-xl">
-            Come to us for one service or let us bring several together. Either way, the result is
-            considered as a whole, not a collection of disconnected jobs.
+            You may need one service or a complete project. We help you choose the right work before
+            it begins.
           </p>
         </div>
 
@@ -155,33 +152,33 @@ export default function Home() {
       <section className="bg-ink px-5 py-24 text-white md:px-10 md:py-36">
         <div className="mx-auto grid max-w-[1440px] gap-16 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="lg:sticky lg:top-32 lg:self-start">
-            <p className="eyebrow text-red-light">What accountability means</p>
+            <p className="eyebrow text-red-light">One team, one clear plan</p>
             <h2 className="mt-6 max-w-lg font-display text-[clamp(3.5rem,6vw,6.3rem)] leading-[0.9] tracking-[-0.05em]">
-              Fewer loose ends.
-              <span className="block italic text-red-light">A clearer finish.</span>
+              Keep your idea clear
+              <span className="block italic text-red-light">from start to finish.</span>
             </h2>
           </div>
           <div className="border-t border-white/18">
             {[
               [
                 '01',
-                'One defined scope',
-                'The agreed outcome, responsibilities and inclusions are made clear before delivery begins.',
+                'Agree on the result',
+                'First, we agree on what the finished space should be like.',
               ],
               [
                 '02',
-                'One coordinated sequence',
-                'Trades and services are organised around the property, rather than leaving you to connect them.',
+                'Follow a clear plan',
+                'We arrange the work in the right order and keep you informed.',
               ],
               [
                 '03',
-                'One record of decisions',
-                'Materials, finishes and changes stay connected to the approved direction.',
+                'Approve each key choice',
+                'You approve materials, finishes and changes before we move ahead.',
               ],
               [
                 '04',
-                'One proper handover',
-                'Delivery closes with a walkthrough and open-item check, not an unexplained exit.',
+                'Check the finished work',
+                'We walk through the space with you and note anything left to complete.',
               ],
             ].map(([number, title, body]) => (
               <div
@@ -200,9 +197,9 @@ export default function Home() {
       <section id="process" className="bg-paper px-5 py-24 md:px-10 md:py-36">
         <div className="mx-auto max-w-[1440px]">
           <SectionHeading
-            eyebrow="The project path"
-            title="Clarity before activity."
-            body="Every property is different. The way we move from request to handover should still feel considered and clear."
+            eyebrow="From first message to handover"
+            title="You do not need all the answers."
+            body="Tell us what is wrong and what you want instead. We will help you plan the next step."
           />
           <div className="mt-16 grid border-l border-t border-black/12 md:grid-cols-2 lg:grid-cols-4">
             {projectProcess.map((item) => (
@@ -224,13 +221,13 @@ export default function Home() {
         <div className="mx-auto grid max-w-[1440px] gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
             <SectionHeading
-              eyebrow="Start with a property brief"
-              title="What needs to change?"
-              body="Send the current condition, the outcome you want and where the property is. Rough ideas, photos and measurements are enough to begin the conversation."
+              eyebrow="A simple first step"
+              title="Show us the space."
+              body="Send a few photos, the location and a short note about the problem. That is enough to begin."
             />
             <div className="mt-10 border-t border-black/12 pt-6">
               <p className="text-sm leading-relaxed text-ink/55">
-                Prefer to talk it through first?
+                Not ready to complete the form? Send us a message instead.
               </p>
               <a
                 href={whatsappContactHref}
@@ -250,13 +247,13 @@ export default function Home() {
       <section className="border-t border-black/10 bg-paper px-5 py-16 md:px-10 md:py-20">
         <div className="mx-auto flex max-w-[1440px] flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div>
-            <p className="eyebrow text-red">{site.tagline}</p>
+            <p className="eyebrow text-red">Not sure where to begin?</p>
             <p className="mt-3 max-w-4xl font-display text-4xl leading-tight tracking-[-0.035em] md:text-6xl">
-              {site.promise}
+              Start with a simple conversation about your space.
             </p>
           </div>
           <Link href="/contact#quote" className="button-primary shrink-0">
-            Start a property brief <ArrowRight className="size-4" />
+            Tell us what is going on <ArrowRight className="size-4" />
           </Link>
         </div>
       </section>

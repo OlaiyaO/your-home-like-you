@@ -1,5 +1,7 @@
 import { Building2, Hammer, Sparkles, SwatchBook } from 'lucide-react';
 
+const serviceArea = process.env.NEXT_PUBLIC_SERVICE_AREA || '';
+
 export const site = {
   name: 'Your Home Like You',
   shortName: 'YHLY',
@@ -7,32 +9,33 @@ export const site = {
   promise: 'One accountable team. From first idea to finished space.',
   description:
     'Construction and property delivery coordinated from scope to handover, across new builds, interiors, care, renovation and property services.',
-  contactName: 'Ajoke Ola',
-  primaryEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || '[PRIMARY BUSINESS EMAIL]',
-  primaryEmailConfigured: Boolean(process.env.NEXT_PUBLIC_CONTACT_EMAIL),
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || '[PRIMARY BUSINESS EMAIL]',
-  phone: '+234 704 006 3000',
-  whatsappNumber: '2347040063000',
+  contactName: 'Your Home Like You team',
+  foundedYear: 2019,
+  verifiedCustomerCount: 50,
+  primaryEmail: 'jummyholar@yahoo.com',
+  primaryEmailConfigured: true,
+  email: 'jummyholar@yahoo.com',
+  phone: '+234 802 309 2781',
+  whatsappNumber: '2348023092781',
   whatsappConfigured: true,
-  instagram: process.env.NEXT_PUBLIC_INSTAGRAM_URL || '/',
-  instagramConfigured: Boolean(process.env.NEXT_PUBLIC_INSTAGRAM_URL),
+  instagram:
+    process.env.NEXT_PUBLIC_INSTAGRAM_URL || 'https://www.instagram.com/ur_home_like_u_interiors/',
+  instagramConfigured: true,
   facebook: process.env.NEXT_PUBLIC_FACEBOOK_URL || '/',
   facebookConfigured: Boolean(process.env.NEXT_PUBLIC_FACEBOOK_URL),
   linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || '/',
   linkedinConfigured: Boolean(process.env.NEXT_PUBLIC_LINKEDIN_URL),
-  addressLines: [
-    'Shop 3, B10 Plaza',
-    'B10 Street, Citec Mbora Estate',
-    'Along Jabi Airport Road',
-    'Abuja, Nigeria',
-  ],
-  location:
-    'Shop 3, B10 Plaza, B10 Street, Citec Mbora Estate, Along Jabi Airport Road, Abuja, Nigeria',
+  addressLines: serviceArea ? [serviceArea] : [],
+  location: serviceArea,
 };
 
-export const whatsappHref = `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(
-  'Hello Your Home Like You, I would like to discuss a project.',
-)}`;
+export function buildWhatsAppHref(message) {
+  return `https://wa.me/${site.whatsappNumber}?text=${encodeURIComponent(message)}`;
+}
+
+export const whatsappHref = buildWhatsAppHref(
+  "Hi Your Home Like You, I'd love some help with a property project. Can I tell you what I have in mind?",
+);
 
 export const whatsappContactHref = site.whatsappConfigured ? whatsappHref : '/contact#quote';
 
@@ -43,7 +46,7 @@ export const serviceGroups = [
     eyebrow: 'Build from the ground up',
     title: 'Full construction & building delivery',
     description:
-      'End-to-end delivery for new residential and commercial buildings, coordinated from approved scope and site preparation through structure, services, finishes and final handover.',
+      'We turn your building idea into a clear plan. Then we coordinate the work from site preparation to handover.',
     icon: Building2,
     image: '/services/construction.jpg',
     imageAlt: 'Construction professionals coordinating work on a reinforced concrete building site',
@@ -61,7 +64,7 @@ export const serviceGroups = [
     eyebrow: 'Dress the space',
     title: 'Curtains, blinds & interiors',
     description:
-      'Made-to-measure window treatments and considered interiors that make a room feel complete, not merely decorated.',
+      'We use curtains, blinds and interior details to make your room feel private, complete and personal.',
     icon: SwatchBook,
     image: '/services/interiors.jpg',
     imageAlt: 'A warm finished living room with full-length curtains and considered furnishings',
@@ -79,7 +82,7 @@ export const serviceGroups = [
     eyebrow: 'Care for the space',
     title: 'Cleaning & property care',
     description:
-      'Detailed cleaning for occupied homes, new builds, offices and handovers, with standards you can inspect before we leave.',
+      'We clean and prepare your property so it is ready to use, move into or hand over.',
     icon: Sparkles,
     image: '/services/property-care.jpg',
     imageAlt: 'A professional cleaner carefully polishing a glass partition in a finished interior',
@@ -97,7 +100,7 @@ export const serviceGroups = [
     eyebrow: 'Transform the space',
     title: 'Renovation & project delivery',
     description:
-      'A practical path from scope and costing to trades, finishes and handover, coordinated around the result you approved.',
+      'We plan the changes, coordinate the workers and keep the project focused on the result you approved.',
     icon: Hammer,
     image: '/services/renovation.jpg',
     imageAlt:
@@ -116,7 +119,7 @@ export const serviceGroups = [
     eyebrow: 'Move the property forward',
     title: 'Property & real-estate services',
     description:
-      'Support for owners and buyers who need a property sourced, prepared, improved, presented or moved to its next chapter.',
+      'We help you find, prepare or improve a property without making you manage every detail alone.',
     icon: Building2,
     image: '/services/property.jpg',
     imageAlt: 'A contemporary tropical residence with landscaped grounds and a swimming pool',
@@ -134,32 +137,29 @@ export const projectProcess = [
   {
     step: '01',
     title: 'Tell us what must change',
-    detail:
-      'Send photos, dimensions, a location and the outcome you want. Rough ideas are welcome.',
+    detail: 'Send photos, the location and a short note about the problem.',
   },
   {
     step: '02',
     title: 'We inspect and define the work',
-    detail:
-      'Where necessary, we visit the property, confirm scope, materials, timing and responsibilities.',
+    detail: 'We ask questions, inspect the property if needed and define the work.',
   },
   {
     step: '03',
     title: 'You approve a clear proposal',
-    detail:
-      'You see what is included, what it costs and how delivery will be checked before work begins.',
+    detail: 'You see the work, cost and checks before the project begins.',
   },
   {
     step: '04',
     title: 'We deliver and hand over',
-    detail:
-      'One team coordinates the moving pieces and closes with a walkthrough, not an unexplained exit.',
+    detail: 'We manage the work, then walk through the finished space with you.',
   },
 ];
 
 export const nav = [
   { label: 'Services', href: '/services' },
   { label: 'Shop', href: '/shop' },
+  { label: 'Our work', href: '/portfolio' },
   { label: 'How it works', href: '/#process' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
